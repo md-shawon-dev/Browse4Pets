@@ -5,8 +5,5 @@
   margin: 0 auto;
 }
 .trending_pet_products .left_card {
-  background-image: url("./assets/cute-pet-small.png");
-  background-size: 190px 300px;
-  background-position: right bottom;
-  background-repeat: no-repeat;
+  background-size: 200px 320px;
 }
