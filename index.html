@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com/"></script>
     <title>Browse4Pets</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <style type="text/tailwindcss">
+    <!-- <style type="text/tailwindcss">
       @theme {
         --color-primary: #ffdc26;
         --color-Flavescent: #f9df8a;
@@ -20,7 +20,25 @@
         --font-adlam: "ADLaM Display", "serif";
         --font-sora: "Sora", "sans-serif";
       }
-    </style>
+    </style> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "#ffdc26",
+              Flavescent: "#f9df8a",
+              secondary: "#fff9f4",
+            },
+            fontFamily: {
+              adlam: ["ADLaM Display", "serif"],
+              sora: ["Sora", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body class="bg-white">
     <!-- navbar start -->
@@ -438,6 +456,53 @@
     </section>
     <!-- Trending Pet Products end -->
     <!-- Everyday low Price start -->
+    <section class="py-20 wrap_container">
+      <h2 class="font-adlam text-2xl md:text-4xl">Everyday low Price</h2>
+      <div class="gap-6 grid md:grid-cols-1 lg:grid-cols-[3fr_2fr] mt-12">
+        <div
+          class="relative gap-5 grid md:grid-cols-[3fr_360px] bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] p-8 md:p-12 pr-0 md:pr-0 pb-0 md:pb-0 rounded-xl h-[340px] md:h-[480px]"
+        >
+          <div class="md:my-auto">
+            <p class="md:block hidden font-sora text-xl">Under Price</p>
+            <h2 class="my-0 md:my-3 font-adlam text-xl md:text-4xl">
+              Pet Grooming Mitt
+            </h2>
+            <p class="md:block hidden font-adlam text-2xl text-white">
+              (Easy Hair Removal)
+            </p>
+            <p
+              class="text-white md:black mt-1 md:mt-3 font-adlam text-[32px] md:text-6xl"
+            >
+              $39.99
+            </p>
+          </div>
+          <img
+            src="./assets/cute-dog-mid.png"
+            class="relative -top-10 -right-3 bottom-0 md:my-auto ml-auto w-[210px] md:w-full md:h-full"
+            alt=""
+          />
+        </div>
+        <div
+          class="relative grid bg-[linear-gradient(109deg,#FFF9F4_1.27%,#F9DF8A_100%)] p-8 md:p-12 pr-0 md:pr-0 pb-0 rounded-xl h-[340px] md:h-[480px]"
+        >
+          <div>
+            <h2 class="my-0 md:my-3 font-adlam text-xl md:text-4xl">
+              T-Shirt for Dogs
+            </h2>
+            <p
+              class="mt-1 md:mt-3 font-adlam text-[32px] text-primary md:text-6xl"
+            >
+              $7.996
+            </p>
+          </div>
+          <img
+            src="./assets/cute-pet-mid.png"
+            alt=""
+            class="right-0 bottom-0 absolute ml-auto w-[220px] md:w-[300px] lg:w-[250px] xl:w-[300px] h-auto"
+          />
+        </div>
+      </div>
+    </section>
     <!-- Everyday low Price end -->
     <!-- Subscribe start -->
     <!-- Subscribe end -->
